@@ -1,0 +1,2 @@
+﻿# Bloquea acceso directo: los archivos solo se sirven con sesion via admin/file_view.php
+Require all denied

@@ -1,0 +1,379 @@
+:root {
+  --midnight: #081a2c;
+  --sky: #66c7ea;
+  --magenta: #d864e0;
+  --sun: #f2c318;
+  --paper: #f5f9ff;
+  --ink: #0b1725;
+  --danger: #b8143d;
+  --ok: #1f8b4d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at 8% 20%, rgba(102, 199, 234, 0.2), transparent 38%),
+    radial-gradient(circle at 95% 10%, rgba(216, 100, 224, 0.2), transparent 40%),
+    linear-gradient(160deg, #f4f9ff 0%, #e5eef9 60%, #f2f7ff 100%);
+  color: var(--ink);
+  min-height: 100vh;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  background: rgba(245, 249, 255, 0.86);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(8, 26, 44, 0.08);
+  z-index: 20;
+}
+
+.brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand-logo {
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 8px 20px rgba(8, 26, 44, 0.1);
+}
+
+.eyebrow {
+  margin: 0;
+  letter-spacing: 0.12rem;
+  text-transform: uppercase;
+  color: #45617f;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+h1 {
+  margin: 0.25rem 0 0;
+  font-size: 1.5rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--midnight);
+  font-weight: 700;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.hero-block {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 22px;
+  box-shadow: 0 15px 35px rgba(8, 26, 44, 0.12);
+  overflow: hidden;
+}
+
+.hero-block h2 {
+  margin-top: 0;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  color: var(--midnight);
+}
+
+.shape-panel {
+  min-height: 220px;
+  background:
+    linear-gradient(145deg, rgba(102, 199, 234, 0.85), rgba(216, 100, 224, 0.85)),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.35) 0 8px, transparent 8px 16px);
+  border-radius: 20px;
+  clip-path: polygon(10% 5%, 95% 0, 84% 100%, 0 80%);
+}
+
+.info-grid {
+  margin: 1.8rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.info-card,
+.donation-section,
+.login-card,
+.admin-card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 25px rgba(8, 26, 44, 0.08);
+}
+
+.donation-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stack-form {
+  display: grid;
+  gap: 0.55rem;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+textarea {
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #bfd0e5;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.btn {
+  border: 0;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.66rem 1.25rem;
+  background: linear-gradient(90deg, var(--midnight), #12385f);
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--midnight);
+  border: 1px solid #90a6bf;
+}
+
+.feedback {
+  min-height: 1.2rem;
+  font-weight: 600;
+}
+
+.feedback.ok {
+  color: var(--ok);
+}
+
+.feedback.error,
+.alert.error {
+  color: var(--danger);
+}
+
+.site-footer {
+  text-align: center;
+  padding: 1.2rem;
+  color: #385170;
+}
+
+.login-body {
+  display: grid;
+  place-items: center;
+}
+
+.login-shell {
+  width: min(96vw, 460px);
+  padding: 2rem 1rem;
+}
+
+.admin-shell {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.admin-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+th,
+td {
+  border-bottom: 1px solid #dde7f4;
+  text-align: left;
+  padding: 0.5rem;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.archive-upload-form select {
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #bfd0e5;
+  border-radius: 10px;
+  width: 100%;
+  font: inherit;
+  background: #fff;
+}
+
+.archive-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.archive-toolbar h2 {
+  margin: 0;
+}
+
+.archive-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.archive-filters .btn.is-active {
+  background: linear-gradient(90deg, var(--midnight), #12385f);
+  color: #fff;
+  border-color: transparent;
+}
+
+.archive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.archive-item {
+  border: 1px solid #dde7f4;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #f8fbff;
+  display: flex;
+  flex-direction: column;
+}
+
+.archive-thumb {
+  display: block;
+  aspect-ratio: 4 / 3;
+  background: #e8eef6;
+  overflow: hidden;
+}
+
+.archive-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.archive-thumb-doc {
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--midnight);
+  background:
+    linear-gradient(145deg, rgba(102, 199, 234, 0.35), rgba(216, 100, 224, 0.25));
+}
+
+.archive-meta {
+  padding: 0.85rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.archive-meta h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--midnight);
+}
+
+.archive-tags {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: #45617f;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.archive-sub {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #5a718a;
+}
+
+.archive-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.35rem;
+}
+
+.archive-actions .btn {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 900px) {
+  .hero-block,
+  .donation-section,
+  .info-grid,
+  .admin-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
+}

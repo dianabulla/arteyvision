@@ -1,0 +1,13 @@
+# Local / runtime
+__pycache__/
+*.pyc
+*.log
+.DS_Store
+Thumbs.db
+
+# Uploads generados (mantener estructura)
+assets/uploads/archive/*
+!assets/uploads/archive/.gitkeep
+!assets/uploads/archive/.htaccess
+assets/uploads/sections/*
+!assets/uploads/sections/.gitkeep

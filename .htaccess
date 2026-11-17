@@ -1,0 +1,6 @@
+RewriteEngine On
+
+RewriteRule ^arteyvision/public/index\.php$ / [R=301,L]
+RewriteRule ^arteyvision/?$ / [R=301,L]
+RewriteRule ^arteyvision/(.*)$ /$1 [R=301,L]
+RewriteRule ^public/index\.php$ / [R=301,L]
